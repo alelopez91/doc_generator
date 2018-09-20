@@ -3,6 +3,7 @@ if Rails.env.production?
 else
   wkhtmltopdf_path = Gem.bin_path('wkhtmltopdf-binary', 'wkhtmltopdf')
 end
+
 WickedPdf.config = {
   exe_path: wkhtmltopdf_path
 }

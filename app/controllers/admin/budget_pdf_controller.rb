@@ -6,7 +6,17 @@ module Admin
       render template: 'admin/budget_pdf/show',
               pdf: "#{@budget.client_name}-#{@budget.project_name}",
               layout: 'wicked_pdf.html.erb',
-              disposition: 'inline'
+              disposition: 'inline',
+              header: {
+                html: {
+                  template: 'admin/budget_pdf/header'
+                }
+              },
+              footer: {
+                html: {
+                  template: 'admin/budget_pdf/footer'
+                }
+              }
     end
   end
 end
